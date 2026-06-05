@@ -2,7 +2,7 @@
   "project_name": "Aretha Kitchen",
   "project_slug": "aretha-kitchen",
   "client": "Aretha Kitchen",
-  "environment": "development",
+  "environment": "production",
   "tracking": {
     "gtm_id": "GTM-P833ZMS",
     "enabled": true
@@ -23,7 +23,7 @@
   },
   "deploy": {
     "user": "root",
-    "server": "",
+    "server": "157.173.197.116",
     "remote_path": "/var/www/eventos.arethakitchen.com.br"
   },
   "meta": {
