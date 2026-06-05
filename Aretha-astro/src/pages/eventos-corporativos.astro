@@ -1,0 +1,445 @@
+---
+// Gerado a partir de: eventos-corporativos.html
+import Base from '../layouts/Base.astro';
+import config from '../../config.json';
+import Img from '../components/ui/Img.astro';
+import LeadForm from '../components/forms/LeadForm.astro';
+import WhatsAppModal from '../components/layout/WhatsAppModal.astro';
+import '../styles/eventos-corporativos.css';
+
+const title = "Eventos Corporativos Premium em São Paulo | Aretha Kitchen";
+const description = "Realize seu evento corporativo, reuniões, workshops ou jantares de negócios em um espaço exclusivo com gastronomia internacional de luxo em Moema, SP.";
+const canonical = "https://eventos.arethakitchen.com.br/eventos-corporativos/";
+---
+
+<Base
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage="/images/og-eventos-corporativos.jpg"
+>
+  <Fragment slot="head">
+    <!-- FontAwesome para os Ícones -->
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" 
+    />
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <!-- Swiper Slider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Baskervville Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baskervville:400,400italic&display=swap" />
+  </Fragment>
+
+  <!-- Hero Section -->
+  <header class="corp-hero" style="background-image: url('/src/assets/images/bg-hero-corporativos.webp');" id="hero">
+    <div class="container corp-hero-content">
+      <Img 
+        src="ArethaSoulKitchen_Logo.png" 
+        alt="Aretha Soul Kitchen Logo" 
+        width={240} 
+        height={54} 
+        class="corp-hero-logo" 
+        priority 
+      />
+      <h1 class="corp-hero-title">MAIS QUE UM EVENTO CORPORATIVO: UMA EXPERIÊNCIA CULTURAL</h1>
+      <p class="corp-hero-text">
+        O Aretha Soul Kitchen é o espaço ideal para eventos intimistas: reuniões empresariais, confraternizações, encontros de mentoria, entre outros.
+      </p>
+      <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+    </div>
+  </header>
+
+  <!-- Experience & Spaces Section Wrapper -->
+  <section class="corp-experience-spaces-section">
+    
+    <!-- Experience Card Box -->
+    <div class="container">
+      <div class="corp-experience-card">
+        <Img 
+          src="Papagaio.png" 
+          alt="Papagaio decorativo" 
+          width={336} 
+          height={228} 
+          class="corp-floating-bird" 
+        />
+        <div class="corp-experience-grid">
+          
+          <div class="corp-experience-content">
+            <h2 class="corp-experience-title">UMA EXPERIÊNCIA COMPLETA</h2>
+            <p class="corp-experience-text">
+              No Aretha Soul Kitchen, cada evento é pensado para ser único. Localizado em Moema, nosso espaço é ideal para eventos corporativos, confraternizações e encontros exclusivos, do brunch ao jantar. Nossa equipe cuida de cada detalhe com agilidade e dedicação, oferecendo gastronomia sofisticada, drinks exclusivos e música ambiente, tornando cada reunião, mentoria ou confraternização um momento memorável.
+            </p>
+            <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+          </div>
+
+          <div class="corp-experience-media">
+            <Img 
+              src="sobre_aretha.webp" 
+              alt="Espaço Aretha Soul Kitchen" 
+              width={480} 
+              height={735} 
+              class="corp-experience-img" 
+            />
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Spaces Section Nested -->
+    <div class="corp-spaces" id="espacos">
+      <div class="container" style="position: relative;">
+        <h2 class="corp-spaces-title">Restaurante para eventos,<br />confraternizações empresariais.</h2>
+        
+        <div class="corp-spaces-grid">
+          
+          <!-- Térreo -->
+          <article class="space-card">
+            <div class="space-card-img-wrapper">
+              <Img src="Terreo-scaled.webp" alt="Espaço Térreo Aretha" width={400} height={350} class="space-card-img" />
+              <h3 class="space-card-title">TÉRREO</h3>
+            </div>
+            <div class="space-card-content">
+              <p class="space-card-text">Acomoda até 30 pessoas sentadas ou 70 pessoas no formato coquetel.</p>
+            </div>
+          </article>
+
+          <!-- Bar Integrado -->
+          <article class="space-card">
+            <div class="space-card-img-wrapper">
+              <Img src="Bar-integrado-scaled.webp" alt="Bar Integrado Aretha" width={400} height={350} class="space-card-img" />
+              <h3 class="space-card-title">BAR INTEGRADO</h3>
+            </div>
+            <div class="space-card-content">
+              <p class="space-card-text">Ambiente descontraído, perfeito para apreciar drinks deliciosos.</p>
+            </div>
+          </article>
+
+          <!-- Mezanino -->
+          <article class="space-card">
+            <div class="space-card-img-wrapper">
+              <Img src="Mezanino-scaled.webp" alt="Mezanino Aretha" width={400} height={350} class="space-card-img" />
+              <h3 class="space-card-title">MEZANINO</h3>
+            </div>
+            <div class="space-card-content">
+              <p class="space-card-text">Acomoda até 50 pessoas</p>
+            </div>
+          </article>
+
+        </div>
+        
+        <Img src="Folha.png" alt="Folha decorativa" width={425} height={289} class="corp-floating-leaf" />
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Exclusives Section -->
+  <section class="corp-exclusives">
+    <div class="corp-exclusives-bg" style="background-image: url('/images/Mao.png');"></div>
+    <div class="container">
+      <h2 class="corp-exclusives-title">EXCLUSIVIDADES QUE FAZEM<br />TODA A DIFERENÇA</h2>
+      
+      <div class="corp-exclusives-grid">
+        
+        <div class="exclusive-item">
+          <Img src="localizacao.webp" alt="Localização" width={180} height={180} class="exclusive-icon" />
+          <span class="exclusive-caption">Localização<br>Privilegiada</span>
+        </div>
+
+        <div class="exclusive-item">
+          <Img src="Microfone.webp" alt="Microfone" width={180} height={180} class="exclusive-icon" />
+          <span class="exclusive-caption">Microfone</span>
+        </div>
+
+        <div class="exclusive-item">
+          <Img src="Cadeira.webp" alt="Mobiliário" width={180} height={180} class="exclusive-icon" />
+          <span class="exclusive-caption">Mobiliário<br>Completo</span>
+        </div>
+
+        <div class="exclusive-item">
+          <Img src="speaker-1.png" alt="Som" width={180} height={180} class="exclusive-icon" />
+          <span class="exclusive-caption">Caixas acústicas<br>e mesa de som</span>
+        </div>
+
+        <div class="exclusive-item">
+          <Img src="TV.webp" alt="TV" width={180} height={180} class="exclusive-icon" />
+          <span class="exclusive-caption">Televisão<br>e Notebook</span>
+        </div>
+
+        <div class="exclusive-item">
+          <Img src="Projetor.webp" alt="Projetor" width={180} height={180} class="exclusive-icon" />
+          <span class="exclusive-caption">Projetor e<br>Telão</span>
+        </div>
+
+        <div class="exclusive-item">
+          <Img src="air-conditioning_1.png" alt="Ar Condicionado" width={180} height={180} class="exclusive-icon" />
+          <span class="exclusive-caption">Espaço climatizado<br>(ar quente e frio)</span>
+        </div>
+
+        <div class="exclusive-item">
+          <Img src="Deficiente.webp" alt="Acessibilidade" width={180} height={180} class="exclusive-icon" />
+          <span class="exclusive-caption">Banheiro<br>acessível</span>
+        </div>
+
+        <div class="exclusive-item">
+          <Img src="Staff.webp" alt="Equipe" width={180} height={180} class="exclusive-icon" />
+          <span class="exclusive-caption">Equipe de Staff<br>qualificada</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gastronomy Section -->
+  <section class="corp-gastronomy" id="gastronomia">
+    <div class="container corp-gastronomy-grid" style="position: relative;">
+      
+      <!-- Swiper Widget Wrapper with Railroad Background -->
+      <div class="gastronomy-swiper-container">
+        <div class="gastronomy-swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <Img src="gastronomia-4.webp" alt="Prato Gourmet Aretha 1" width={500} height={750} />
+            </div>
+            <div class="swiper-slide">
+              <Img src="gastronomia-3.webp" alt="Prato Gourmet Aretha 2" width={500} height={750} />
+            </div>
+            <div class="swiper-slide">
+              <Img src="gastronomia-6.webp" alt="Drinks Sophisticados" width={500} height={750} />
+            </div>
+            <div class="swiper-slide">
+              <Img src="galeria-gastronomia-aretha-kitchen-3-1-scaled.jpeg" alt="Gastronomia 4" width={500} height={750} />
+            </div>
+            <div class="swiper-slide">
+              <Img src="galeria-gastronomia-aretha-kitchen-5-scaled.jpeg" alt="Gastronomia 5" width={500} height={750} />
+            </div>
+            <div class="swiper-slide">
+              <Img src="galeria-gastronomia-aretha-kitchen-1-scaled.jpeg" alt="Gastronomia 6" width={500} height={750} />
+            </div>
+          </div>
+          <!-- Setas de Navegação -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <div class="corp-gastronomy-content">
+        <h2 class="corp-gastronomy-title">GASTRONOMIA QUE<br />ATRAVESSA<br />FRONTEIRAS</h2>
+        <p class="corp-gastronomy-text">
+          Nosso restaurante para eventos oferece uma gastronomia internacional. Nossa culinária combina ingredientes, temperos e técnicas artesanais de diversas partes do mundo, proporcionando aos apreciadores uma experiência de sabores únicos e inovadores. Valorizamos a gastronomia de diferentes culturas, sem impor rótulos. Nosso menu é diversificado, oferecendo desde finger foods até sobremesas surpreendentes.
+        </p>
+      </div>
+
+      <Img src="Limao.png" alt="Limão decorativo" width={300} height={204} class="corp-floating-lemon" />
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="corp-gallery">
+    <div class="container">
+      <h2 class="corp-gallery-title">DESCUBRA OS DETALHES QUE O ARETHA PODE PROPORCIONAR AO SEU EVENTO</h2>
+      
+      <div class="corp-gallery-layout">
+        <div class="gallery-col gallery-col-left">
+          <div class="gallery-item"><Img src="galeria-6.webp" alt="Detalhe do Espaço" width={416} height={250} class="gallery-item-img" /></div>
+          <div class="gallery-item"><Img src="galeria-5-scaled.webp" alt="Mesa posta decorada" width={416} height={555} class="gallery-item-img" /></div>
+        </div>
+        <div class="gallery-col gallery-col-right">
+          <div class="gallery-row gallery-row-top">
+            <div class="gallery-item col-small"><Img src="galeria-3.webp" alt="Detalhe Gourmet" width={229} height={350} class="gallery-item-img" /></div>
+            <div class="gallery-item col-large"><Img src="galeria-2.webp" alt="Salão Aretha" width={454} height={350} class="gallery-item-img" /></div>
+          </div>
+          <div class="gallery-row gallery-row-bottom">
+            <div class="gallery-item"><Img src="galeria-4.webp" alt="Brinde corporativo" width={342} height={457} class="gallery-item-img" /></div>
+            <div class="gallery-item"><Img src="galeria-1-scaled.webp" alt="Ambiente externo" width={342} height={457} class="gallery-item-img" /></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="corp-testimonials">
+    <div class="container">
+      <h2 class="corp-testimonials-title">DEPOIMENTOS QUE PROVAM NOSSA EXCELÊNCIA</h2>
+      
+      <div class="meus-depoimentos-container">
+        
+        <!-- Depoimento 1 -->
+        <article class="testimonial-card">
+          <Img src="pexels-photo-614810.jpeg" alt="Foto de Theo Moraes" width={80} height={80} class="avatar" />
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <h3 class="name">Theo Moraes</h3>
+          <p class="text-content">Adorei minha experiência no Aretha! Comida maravilhosa e atendimento nota 1000!</p>
+        </article>
+
+        <!-- Depoimento 2 -->
+        <article class="testimonial-card">
+          <Img src="pexels-photo-774909.jpeg" alt="Foto de Júlia Bussab Fonseca" width={80} height={80} class="avatar" />
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <h3 class="name">Júlia Bussab Fonseca</h3>
+          <p class="text-content">Eu confiei no Aretha Soul Kitchen um dos dias mais especiais da minha vida: meu casamento. E não poderia ter feito melhor escolha! A Melissa me passou confiança desde o início, pela simpatia e cuidado que ela teve em cuidar de cada detalhe! A comida estava impecável, o serviço foi muito especial, com atendentes extremamente atenciosos e simpáticos, e o ambiente perfeito: do jeito que eu queria! Tive zero stress, curti a noite toda, e fiquei com memórias incríveis.</p>
+        </article>
+
+        <!-- Depoimento 3 -->
+        <article class="testimonial-card">
+          <Img src="pexels-photo-733872.jpeg" alt="Foto de Amanda" width={80} height={80} class="avatar" />
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <h3 class="name">Amanda</h3>
+          <p class="text-content">Eles amaram! tanto que falaram que o próximo jantar vai ser difícil de ser melhor.</p>
+        </article>
+
+        <!-- Depoimento 4 -->
+        <article class="testimonial-card">
+          <Img src="pexels-photo-1239291.jpeg" alt="Foto de Ana K" width={80} height={80} class="avatar" />
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <h3 class="name">Ana K</h3>
+          <p class="text-content">Eu frequento o Aretha faz anos e sou muito apaixonada pelo cuidado e a qualidade dos pratos! A Mel, dona do Aretha, nitidamente coloca todo amor dela nesse restaurante. Indico muito o Sanduíche de Filé de Peixe com melaço de laranja, os Risottos e as sobremesas!! Até comemorei meu aniversário no Aretha já e foi maravilhoso!</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="corp-contact" id="contato">
+    <div class="container corp-contact-grid">
+      
+      <div class="corp-contact-info">
+        <div class="corp-contact-text-group">
+          <h2 class="corp-contact-title">PRONTO PARA UMA EXPERIÊNCIA CULTURAL?</h2>
+          <Img src="Origami.png" alt="Origami" width={370} height={252} class="corp-contact-logo-origami" />
+          <p class="corp-contact-text">Preencha o formulário para receber nosso contato.</p>
+        </div>
+        <Img src="ArethaSoulKitchen_Logo.png" alt="Aretha Soul Kitchen Logo" width={240} height={54} class="corp-contact-logo" />
+      </div>
+
+      <div class="corp-form-wrapper">
+        <LeadForm
+          formId="corporate-lead-form"
+          project={config.project_slug}
+          submitUrl={config.forms['lead-form'].webhooks[0]}
+          redirectUrl={config.forms['lead-form'].redirect_on_success}
+          submitText="Enviar Solicitação"
+          honeypot
+          fields={[
+            { name: 'empresa', type: 'text', placeholder: 'Empresa', required: false },
+            { name: 'nome', type: 'text', placeholder: 'Nome', required: true },
+            { name: 'telefone', type: 'tel', placeholder: 'Telefone', required: true },
+            { name: 'email', type: 'email', placeholder: 'E-mail', required: true },
+            { name: 'tipo', type: 'select', required: true, options: [
+              { value: '', label: 'Tipo de evento: (Selecione)', disabled: true, selected: true },
+              { value: 'Corporativo', label: 'Corporativo (Geral)' },
+              { value: 'Confraternização corporativa', label: 'Confraternização Corporativa' },
+              { value: 'Reuniões de Networking', label: 'Reuniões de Networking' },
+              { value: 'Offsite corporativo', label: 'Offsite Corporativo' },
+              { value: 'Mentorias e Treinamentos', label: 'Mentorias e Treinamentos' },
+              { value: 'Workshops, Conferências e Seminários', label: 'Workshops, Conferências e Seminários' },
+              { value: 'Outros', label: 'Outros' }
+            ] },
+            { name: 'data', type: 'text', placeholder: 'Data do evento', required: true, id: 'corp-date-picker' },
+            { name: 'convidados', type: 'number', placeholder: 'Número de pessoas', required: true },
+            { name: 'mensagem', type: 'textarea', placeholder: 'Detalhes adicionais: (não obrigatório)', required: false }
+          ]}
+        />
+      </div>
+
+    </div>
+    <Img src="Cantora.png" alt="Cantora decorativa" width={382} height={260} class="corp-contact-singer" />
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="corp-footer">
+    <div class="container corp-footer-grid">
+      <p class="corp-footer-copy">
+        Copyright © 2026 Aretha Soul Kitchen – Todos os direitos reservados
+      </p>
+      <Img src="ArethaSoulKitchen_Logo.png" alt="Aretha Soul Kitchen Logo" width={150} height={34} class="corp-footer-logo" />
+      <div class="corp-footer-dev">
+        <span>Desenvolvido por:</span>
+        <a href="https://dmove.com.br/?utm_source=arethakitchencombr" target="_blank" rel="noopener" class="corp-footer-dev-link">
+          <Img src="logo-dmove.png" alt="Dmove Marketing" width={100} height={24} class="corp-footer-dmove-logo" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Inteligente do WhatsApp -->
+  <WhatsAppModal 
+    eventTypes={[
+      { value: 'Corporativo', label: 'Corporativo' },
+      { value: 'Confraternização corporativa', label: 'Confraternização corporativa' },
+      { value: 'Offsite corporativo', label: 'Offsite corporativo' },
+      { value: 'Mentorias e Treinamentos', label: 'Mentorias e Treinamentos' },
+      { value: 'Workshops, Conferências e Seminários', label: 'Workshops, Conferências e Seminários' },
+      { value: 'Outros', label: 'Outros' }
+    ]}
+  />
+
+  <Fragment slot="scripts">
+    <!-- Flatpickr JS -->
+    <script is:inline src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Swiper Slider JS -->
+    <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script is:inline>
+      const init = () => {
+        // Inicializa o Swiper Carousel
+        if (window.Swiper) {
+          new Swiper('.gastronomy-swiper', {
+            loop: true,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          });
+        }
+
+        // Inicializa o Flatpickr para o campo de data
+        const dateInput = document.getElementById('corp-date-picker');
+        if (dateInput && window.flatpickr) {
+          window.flatpickr(dateInput, {
+            disableMobile: true,
+            dateFormat: "d/m/Y",
+            locale: {
+              weekdays: { shorthand: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"], longhand: ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"] },
+              months: { shorthand: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"], longhand: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"] },
+              firstDayOfWeek: 1,
+              rangeSeparator: " até ",
+              ordinal: () => "º"
+            }
+          });
+        }
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    </script>
+    <!-- Script scoped de depoimentos -->
+    <script>
+      import '../scripts/eventos-corporativos.js';
+    </script>
+  </Fragment>
+
+</Base>

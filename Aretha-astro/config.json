@@ -1,0 +1,34 @@
+{
+  "project_name": "Aretha Kitchen",
+  "project_slug": "aretha-kitchen",
+  "client": "Aretha Kitchen",
+  "environment": "development",
+  "tracking": {
+    "gtm_id": "GTM-P833ZMS",
+    "enabled": true
+  },
+  "forms": {
+    "lead-form": {
+      "id": "lead-form",
+      "redirect_on_success": "",
+      "webhooks": [
+        "https://server3n8n.dmove.com.br/webhook/aretha-kitchen"
+      ],
+      "fields_required": [
+        "nome",
+        "email",
+        "telefone"
+      ]
+    }
+  },
+  "deploy": {
+    "user": "root",
+    "server": "",
+    "remote_path": "/var/www/eventos.arethakitchen.com.br"
+  },
+  "meta": {
+    "created_at": "2026-06-01",
+    "last_updated": "2026-06-01",
+    "owner": "Antigravity"
+  }
+}

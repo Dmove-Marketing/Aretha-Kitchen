@@ -1,0 +1,1153 @@
+/* ==========================================================================
+   CONFRATERNIZAÇÕES PAGE — CUSTOM SCOPED STYLING
+   ========================================================================== */
+
+/* === Hero Section === */
+.conf-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px var(--container-padding);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.conf-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.4) 100%);
+  z-index: -1;
+}
+
+.conf-hero-content {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.conf-hero-logo {
+  width: 220px;
+  height: auto;
+  margin-bottom: var(--space-md);
+}
+
+.conf-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6.5vw, 4.75rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.1 !important;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-transform: uppercase !important;
+  max-width: 900px;
+  margin: 0;
+}
+
+.conf-hero-text {
+  font-family: 'Gilroy', sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  line-height: 1.35em !important;
+  color: #ffffff !important;
+  max-width: 700px;
+  margin: 0;
+}
+
+/* Hero Button Outline Override */
+.conf-hero .btn-primary {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid #B86346 !important;
+  border-radius: 20px !important;
+  font-family: 'Gilroy', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  padding: 12px 28px !important;
+  text-transform: uppercase !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.conf-hero .btn-primary:hover {
+  background-color: #B86346 !important;
+  border-color: #B86346 !important;
+}
+
+/* ==========================================================================
+   UNIFIED EXPERIENCE & SPACES SECTION (Terracotta Quadrado Pattern Wrapper)
+   ========================================================================== */
+.conf-experience-spaces-section {
+  position: relative;
+  background-color: #B86346;
+  padding: 120px 0;
+  overflow: visible;
+  z-index: 2;
+}
+
+.conf-experience-spaces-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/images/Quadrado.png');
+  background-position: center center;
+  background-repeat: repeat;
+  opacity: 0.2;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* --- Experience Beige Card --- */
+.conf-experience-card {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 40px 0;
+  margin-bottom: 80px;
+  position: relative;
+  box-shadow: none;
+}
+
+.conf-experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.conf-experience-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.conf-experience-title {
+  color: #ffffff !important;
+  font-size: 42px !important;
+  font-family: 'BlurLight', sans-serif !important;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.conf-experience-text {
+  font-family: 'Gilroy', sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  line-height: 1.3em !important;
+  color: #ffffff !important;
+  margin: 0;
+}
+
+/* Experience Card Button Override */
+.conf-experience-card .btn-primary {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 20px !important;
+  font-family: 'Gilroy', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  padding: 12px 28px !important;
+  text-transform: uppercase !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.conf-experience-card .btn-primary:hover {
+  background-color: #ABA390 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  opacity: 0.9;
+}
+
+.conf-experience-media {
+  position: relative;
+  width: 100%;
+  height: 735px;
+  margin: -120px 0px;
+  z-index: 2;
+}
+
+/* Floated overlapping Experience Image */
+.conf-experience-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.conf-floating-bird {
+  position: absolute;
+  top: -120px;
+  left: -43px;
+  width: 336px;
+  height: auto;
+  pointer-events: none;
+  z-index: 5;
+  animation: bird-float 6s ease-in-out infinite;
+}
+
+@keyframes bird-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-2deg); }
+}
+
+/* --- Spaces Block --- */
+.conf-spaces {
+  padding: 40px 0 0 0;
+  position: relative;
+}
+
+.conf-spaces-title {
+  color: #ffffff !important;
+  text-align: center;
+  font-family: 'BlurLight', sans-serif !important;
+  font-size: clamp(2rem, 3.5vw, 52px) !important;
+  margin-bottom: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: none !important;
+  line-height: 1.25 !important;
+}
+
+.conf-spaces-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.space-card {
+  background-color: #ABA390 !important;
+  border: none !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s var(--ease-out-expo);
+  display: flex;
+  flex-direction: column;
+}
+
+.space-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+}
+
+.space-card-img-wrapper {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.space-card-img-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.space-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.space-card:hover .space-card-img {
+  transform: scale(1.05);
+}
+
+.space-card-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-grow: 1;
+  text-align: center;
+  min-height: 142px;
+}
+
+.space-card-title {
+  font-family: 'BlurLight', sans-serif !important;
+  font-size: 40px !important;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  margin: 0;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.space-card-text {
+  font-family: 'Gilroy', sans-serif !important;
+  font-size: 24px !important;
+  color: #ffffff !important;
+  line-height: 1.3em !important;
+}
+
+.conf-floating-leaf {
+  position: absolute;
+  top: -95px;
+  right: -120px;
+  width: 425px;
+  height: auto;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* ==========================================================================
+   EXCLUSIVES SECTION
+   ========================================================================== */
+.conf-exclusives {
+  background-color: #ABA390 !important;
+  padding: 120px 0 220px 0 !important;
+  position: relative;
+  z-index: 1;
+}
+
+.conf-exclusives-bg {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 15px;
+  left: calc(50% - 80px);
+  transform: translateX(-50%);
+  opacity: 1;
+  z-index: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.conf-exclusives-title {
+  color: #ffffff !important;
+  text-align: center;
+  font-family: 'BlurLight', sans-serif !important;
+  font-size: 54px !important;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.conf-exclusives-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 30px;
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.exclusive-item {
+  flex: 0 0 210px;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  transition: all 0.3s var(--ease-out-expo);
+}
+
+.exclusive-icon {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.exclusive-caption {
+  font-family: 'Gilroy', sans-serif !important;
+  font-size: 25px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  line-height: 1.3em !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+}
+
+/* ==========================================================================
+   GASTRONOMY SECTION (Terracotta Pattern with Border Radius & Negative Margin)
+   ========================================================================== */
+.conf-gastronomy {
+  position: relative;
+  border-radius: 120px !important;
+  margin: -120px auto 120px auto !important;
+  background-color: #B86346 !important;
+  background-image: url('/images/Design-sem-nome-2.png') !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0 !important;
+  z-index: 2;
+}
+
+.conf-gastronomy-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+}
+
+.conf-gastronomy-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.conf-gastronomy-title {
+  color: #ffffff !important;
+  font-family: 'BlurLight', sans-serif !important;
+  font-size: 54px !important;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.conf-gastronomy-text {
+  font-family: 'Gilroy', sans-serif !important;
+  font-size: 24px !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  line-height: 1.3em !important;
+  margin: 0;
+}
+
+.conf-floating-lemon {
+  position: absolute;
+  bottom: -131px;
+  right: -111px;
+  width: 360px;
+  height: auto;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Swiper Carousel Container with Railroad Background */
+.gastronomy-swiper-container {
+  width: 100%;
+  max-width: 555px;
+  height: 749px;
+  background-image: url('/images/Quadrado.png');
+  background-position: right center;
+  background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Swiper Carousel */
+.gastronomy-swiper {
+  width: 495px;
+  height: 749px;
+  margin: 0 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  box-shadow: none;
+  padding: 0px;
+  position: relative;
+}
+
+.gastronomy-swiper .swiper-slide {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.gastronomy-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gastronomy-swiper .swiper-button-next,
+.gastronomy-swiper .swiper-button-prev {
+  width: 48px !important;
+  height: 48px !important;
+  background-color: #aba390 !important;
+  border-radius: 50% !important;
+  color: #ffffff !important;
+  top: auto !important;
+  bottom: 40px !important;
+  transition: all 0.3s ease;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.gastronomy-swiper .swiper-button-next:after,
+.gastronomy-swiper .swiper-button-prev:after {
+  font-size: 20px !important;
+}
+
+.gastronomy-swiper .swiper-button-prev {
+  left: calc(50% - 54px) !important;
+  right: auto !important;
+}
+
+.gastronomy-swiper .swiper-button-next {
+  left: calc(50% + 6px) !important;
+  right: auto !important;
+}
+
+.gastronomy-swiper .swiper-button-prev:hover,
+.gastronomy-swiper .swiper-button-next:hover {
+  background-color: #B86346 !important;
+}
+
+/* ==========================================================================
+   GALLERY SECTION (Beige Background Overlapping Gastronomy)
+   ========================================================================== */
+.conf-gallery {
+  background-color: #ABA390 !important;
+  margin: -230px 0 0 0 !important;
+  padding: 220px 0 120px 0 !important;
+  position: relative;
+  z-index: 1;
+}
+
+.conf-gallery-title {
+  color: #ffffff !important;
+  text-align: center;
+  font-family: 'BlurLight', sans-serif !important;
+  font-size: 54px !important;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+.conf-gallery-layout {
+  display: flex;
+  gap: 40px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.gallery-col-left {
+  flex: 0 0 416px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-col-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.gallery-row-top {
+  height: 350px;
+}
+
+.gallery-row-bottom {
+  height: 457px;
+}
+
+.gallery-row-top .col-small {
+  flex: 0 0 229px;
+}
+
+.gallery-row-top .col-large {
+  flex: 1;
+}
+
+.gallery-row-bottom .gallery-item {
+  flex: 1 1 50%;
+}
+
+.gallery-col-left .gallery-item:nth-child(1) {
+  height: 250px;
+}
+
+.gallery-col-left .gallery-item:nth-child(2) {
+  height: 555px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  height: 100%;
+}
+
+.gallery-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.gallery-item:hover .gallery-item-img {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   CONTACT SECTION
+   ========================================================================== */
+.conf-contact {
+  position: relative;
+  padding: 120px 0 150px 0 !important;
+  background-color: #B86346;
+  background-image: url('/images/Design-sem-nome-3.webp') !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.conf-contact-grid {
+  display: grid;
+  grid-template-columns: 5.5fr 4.5fr;
+  gap: 60px;
+  align-items: flex-start;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.conf-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 580px;
+}
+
+.conf-contact-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.conf-contact-title {
+  color: #ffffff !important;
+  font-family: 'BlurLight', sans-serif !important;
+  font-size: 54px !important;
+  text-transform: uppercase !important;
+  line-height: 1.2;
+}
+
+.conf-contact-logo-origami {
+  width: 370px;
+  max-width: 90%;
+  height: auto;
+  opacity: 1;
+}
+
+.conf-contact-text {
+  font-family: 'Gilroy', sans-serif !important;
+  font-size: 24px !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  line-height: 1.3em !important;
+  max-width: 440px;
+}
+
+.conf-contact-logo {
+  width: 240px;
+  height: auto;
+}
+
+.conf-form-wrapper {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0px !important;
+  padding: 0px !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  width: 100%;
+}
+
+.conf-form-wrapper .lead-form {
+  max-width: 80% !important;
+}
+
+/* Scoped inputs inside contact form wrapper */
+.conf-form-wrapper .form-input,
+.conf-form-wrapper .form-textarea {
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 2px solid #F6EADB !important;
+  border-radius: 0px !important;
+  padding: 8px 16px !important;
+  color: #ffffff !important;
+  font-size: 21px !important;
+  font-family: 'Baskervville', serif !important;
+  height: auto !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.conf-form-wrapper .form-select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: rgba(255, 255, 255, 0) !important;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 16px 16px !important;
+  padding-right: 40px !important;
+  color: #ffffff !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 2px solid #F6EADB !important;
+  border-radius: 0px !important;
+  padding: 8px 16px !important;
+  font-size: 21px !important;
+  font-family: 'Baskervville', serif !important;
+  height: auto !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.conf-form-wrapper .form-input:focus,
+.conf-form-wrapper .form-select:focus,
+.conf-form-wrapper .form-textarea:focus {
+  border-bottom-color: #B86346 !important;
+}
+
+.conf-form-wrapper .form-input::placeholder,
+.conf-form-wrapper .form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 1 !important;
+}
+
+/* Style select options background to be readable */
+.conf-form-wrapper .form-select option {
+  background-color: #B86346 !important;
+  color: #ffffff !important;
+}
+
+.conf-form-wrapper .form-submit {
+  width: auto !important;
+  background-color: #609B9C !important;
+  color: #ffffff !important;
+  font-family: 'Baskervville', serif !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  padding: 20px 40px !important;
+  border-radius: 20px !important;
+  border: 3px solid #B86346 !important;
+  text-transform: none !important;
+  margin: 30px auto 0 auto !important;
+  display: block !important;
+  transition: all 0.3s ease !important;
+}
+
+.conf-form-wrapper .form-submit:hover {
+  background-color: #4f8081 !important;
+  border-color: #ffffff !important;
+}
+
+/* Center submit container */
+.conf-form-wrapper .form-group:last-of-type {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+.conf-form-wrapper .form-footer {
+  display: none !important;
+}
+
+/* ==========================================================================
+   FOOTER SECTION
+   ========================================================================== */
+.conf-footer {
+  background-color: #060404;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px 0;
+  position: relative;
+  overflow: visible;
+}
+
+.conf-footer-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.conf-footer-logo {
+  width: 150px;
+  height: auto;
+  flex: 0 0 auto;
+}
+
+.conf-footer-copy {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 13px;
+  color: #888888;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.conf-footer-dev {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 13px;
+  color: #888888;
+  flex: 1;
+  justify-content: flex-end;
+  margin-right: 80px;
+}
+
+.conf-footer-dev-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.conf-footer-dmove-logo {
+  height: 20px;
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+  filter: brightness(0) invert(1);
+}
+
+.conf-footer-dmove-logo:hover {
+  opacity: 1;
+}
+
+.conf-floating-singer {
+  position: absolute;
+  bottom: 0px;
+  left: -95.5px;
+  width: 382px;
+  height: auto;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Avoid broken overlaps on mobile)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .conf-experience-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .conf-spaces-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .conf-exclusives-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .conf-gastronomy-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .conf-gallery-layout {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .conf-hero {
+    min-height: 100vh;
+    padding-top: 140px;
+    padding-bottom: 60px;
+  }
+
+  .conf-hero-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .conf-hero-content .btn {
+    align-self: flex-start;
+  }
+
+  .conf-experience-spaces-section {
+    padding: 60px 0;
+  }
+
+  .conf-experience-card {
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+  }
+
+  .conf-experience-media {
+    height: 320px;
+    margin: 0px;
+  }
+
+  .conf-experience-img {
+    margin: 0px;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .conf-floating-bird {
+    display: none;
+  }
+
+  .conf-spaces-title {
+    font-size: 36px !important;
+  }
+
+  .conf-spaces-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .space-card-img-wrapper {
+    height: 240px;
+  }
+
+  .space-card-title {
+    font-size: 28px !important;
+  }
+
+  .space-card-text {
+    font-size: 18px !important;
+  }
+
+  .conf-floating-leaf {
+    display: none;
+  }
+
+  .conf-exclusives {
+    padding: 80px 0 120px 0 !important;
+  }
+
+  .conf-exclusives-bg {
+    width: 200px;
+    height: 200px;
+    top: 15px;
+    left: calc(50% - 60px);
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+
+  .conf-exclusives-title {
+    font-size: 36px !important;
+  }
+
+  .conf-exclusives-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+
+  .exclusive-icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .exclusive-caption {
+    font-size: 18px !important;
+  }
+
+  .conf-gastronomy {
+    border-radius: 40px !important;
+    margin: 0px auto 60px auto !important;
+    padding: 60px 0 !important;
+  }
+
+  .conf-gastronomy-grid {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse; /* Mantém o carrossel abaixo do texto no mobile */
+  }
+
+  .conf-gastronomy-title {
+    font-size: 36px !important;
+  }
+
+  .conf-gastronomy-text {
+    font-size: 18px !important;
+  }
+
+  .gastronomy-swiper-container {
+    height: 400px;
+    max-width: 100%;
+  }
+
+  .gastronomy-swiper {
+    width: calc(100% - 60px);
+    height: 400px;
+    margin: 0 30px;
+  }
+
+  .conf-floating-lemon {
+    display: none;
+  }
+
+  .conf-gallery {
+    margin: 0px !important;
+    padding: 60px 0 60px 0 !important;
+  }
+
+  .conf-gallery-title {
+    font-size: 36px !important;
+  }
+
+  .conf-gallery-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .gallery-col-left,
+  .gallery-col-right {
+    flex: none;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .gallery-row {
+    flex-direction: column;
+    height: auto !important;
+    gap: 20px;
+  }
+
+  .gallery-row-top .col-small,
+  .gallery-row-top .col-large,
+  .gallery-row-bottom .gallery-item {
+    flex: none;
+    width: 100%;
+    height: 300px !important;
+  }
+
+  .gallery-col-left .gallery-item:nth-child(1) {
+    height: 250px !important;
+  }
+
+  .gallery-col-left .gallery-item:nth-child(2) {
+    height: 350px !important;
+  }
+
+  .conf-contact {
+    padding: 80px 0 80px 0 !important;
+    background-position: left center !important;
+  }
+
+  .conf-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .conf-contact-title {
+    font-size: 36px !important;
+    text-align: center;
+  }
+
+  .conf-contact-text {
+    font-size: 18px !important;
+    text-align: center;
+  }
+
+  .conf-contact-info {
+    align-items: center;
+    text-align: center;
+    min-height: auto !important;
+    gap: 40px;
+  }
+
+  .conf-contact-text-group {
+    align-items: center;
+    text-align: center;
+  }
+
+  .conf-form-wrapper {
+    padding: 24px var(--space-md);
+  }
+
+  .conf-form-wrapper .lead-form {
+    max-width: 100% !important;
+  }
+
+  .conf-floating-singer {
+    width: 187px;
+    left: -13%;
+    bottom: 0px;
+  }
+
+  .conf-footer-grid {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .conf-footer-copy {
+    text-align: center;
+    order: 2;
+  }
+
+  .conf-footer-logo {
+    order: 1;
+  }
+
+  .conf-footer-dev {
+    justify-content: center;
+    order: 3;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,228 @@
+/* ==========================================================================
+   BIOGRAPHY (LINK TREE) PAGE — SCORPED STYLING (Aretha Kitchen)
+   ========================================================================== */
+
+.bio-page-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 20px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* Background Overlay */
+.bio-page-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  z-index: 2;
+}
+
+.logo-img {
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.logo-img:hover {
+  transform: scale(1.03);
+}
+
+/* Links Container */
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 440px;
+  z-index: 2;
+  margin-bottom: 32px;
+}
+
+/* Premium Glassmorphic Link Button */
+.bio-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px 24px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 2px 2px 0px 2px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.bio-btn i {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.bio-btn.whatsapp-trigger i {
+  color: #25d366;
+}
+
+.bio-btn:hover,
+.bio-btn:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 2px 2px 0px 2px rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Form Container */
+.form-container {
+  width: 100%;
+  max-width: 440px;
+  padding: 32px 28px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 2px 2px 0px 2px rgba(255, 255, 255, 0.05);
+  z-index: 2;
+  margin-bottom: 40px;
+  transition: all 0.3s var(--ease-out-expo);
+}
+
+.form-container:hover {
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.form-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+/* Form Fields Scoped Overrides for Bio Page */
+.form-container form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+.form-container form select,
+.form-container form textarea,
+.form-container .form-input,
+.form-container .form-select,
+.form-container .form-textarea {
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  border-radius: 5px !important;
+  color: #ffffff !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 14px !important;
+  padding: 14px 10px !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.form-container form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):focus,
+.form-container form select:focus,
+.form-container form textarea:focus,
+.form-container .form-input:focus,
+.form-container .form-select:focus,
+.form-container .form-textarea:focus {
+  border-color: #ffffff !important;
+  outline: none !important;
+}
+
+.form-container form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"])::placeholder,
+.form-container form textarea::placeholder,
+.form-container .form-input::placeholder,
+.form-container .form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 1 !important;
+}
+
+/* Form Submit Button Scoped Overrides for Bio Page */
+.form-container form button[type="submit"] {
+  background-color: transparent !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 5px !important;
+  color: #ffffff !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding: 18px 24px !important;
+  text-transform: none !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+  margin-top: 10px !important;
+}
+
+.form-container form button[type="submit"]:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .bio-page-wrapper {
+    padding: 40px 16px;
+  }
+
+  .logo-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .logo-img {
+    width: 140px;
+  }
+
+  .links-container,
+  .form-container {
+    max-width: 100%;
+  }
+
+  .bio-btn {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  .form-container {
+    padding: 24px 20px;
+  }
+
+  .form-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}

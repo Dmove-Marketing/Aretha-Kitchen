@@ -1,0 +1,178 @@
+---
+// Gerado a partir de: index.html
+import Base from '../layouts/Base.astro';
+import config from '../../config.json';
+import Img from '../components/ui/Img.astro';
+import LeadForm from '../components/forms/LeadForm.astro';
+import WhatsAppModal from '../components/layout/WhatsAppModal.astro';
+import '../styles/index.css';
+
+const title = "Aretha Kitchen | Espaço de Eventos Premium em São Paulo";
+const description = "Espaço Aretha Soul Kitchen. O local ideal para seu evento corporativo, confraternização ou aniversário de luxo em São Paulo. Solicite um orçamento.";
+const canonical = "https://eventos.arethakitchen.com.br/";
+---
+
+<Base
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage="/images/og-index.jpg"
+>
+  <Fragment slot="head">
+    <!-- FontAwesome para os Ícones -->
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" 
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  </Fragment>
+
+  <main class="bio-page-wrapper" style="background-image: url('/src/assets/images/bg-bio.webp');">
+    
+    <!-- Logo -->
+    <header class="logo-container">
+      <Img 
+        src="ArethaSoulKitchen_Logo.png" 
+        alt="Aretha Soul Kitchen Logo" 
+        width={300} 
+        height={68} 
+        class="logo-img" 
+        priority 
+      />
+    </header>
+
+    <!-- Links / Botões -->
+    <section class="links-container">
+      
+      <a 
+        class="bio-btn" 
+        href="https://eventos.arethakitchen.com.br/eventos-corporativos/" 
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-solid fa-atlas"></i>
+        <span>Site</span>
+      </a>
+
+      <a 
+        class="bio-btn" 
+        href="https://www.google.com/maps/place/Aretha+Soul+Kitchen/@-23.6092628,-46.6601709,15z/data=!4m6!3m5!1s0x94ce513edc636847:0xdb639c96185c6bfe!8m2!3d-23.6092628!4d-46.6601709!16s%2Fg%2F11sjfx9bfb?entry=ttu" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <i class="fa-solid fa-map-location-dot"></i>
+        <span>Nosso Endereço</span>
+      </a>
+
+      <button 
+        class="bio-btn whatsapp-trigger" 
+        id="wa-trigger-btn"
+        type="button"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Atendimento | Orçamento</span>
+      </button>
+
+    </section>
+
+    <!-- Formulário de Contato -->
+    <section class="form-container">
+      <h2 class="form-title">Solicite um contato</h2>
+      
+      <LeadForm
+        formId="bio-lead-form"
+        project={config.project_slug}
+        submitUrl={config.forms['lead-form'].webhooks[0]}
+        redirectUrl={config.forms['lead-form'].redirect_on_success}
+        submitText="Solicitar Contato"
+        honeypot
+        fields={[
+          { name: 'nome', type: 'text', placeholder: 'Nome completo:', required: true },
+          {
+            type: 'row',
+            fields: [
+              { name: 'telefone', type: 'tel', placeholder: 'WhatsApp:', required: true },
+              { name: 'email', type: 'email', placeholder: 'E-mail:', required: true }
+            ]
+          },
+          { name: 'tipo', type: 'select', required: true, options: [
+            { value: '', label: 'Tipo de evento: (Selecione)', disabled: true, selected: true },
+            { value: 'Aniversário', label: 'Aniversário' },
+            { value: 'Aniversário debutante', label: 'Aniversário debutante' },
+            { value: 'Bodas', label: 'Bodas' },
+            { value: 'Casamento', label: 'Casamento' },
+            { value: 'Confraternização corporativa', label: 'Confraternização corporativa' },
+            { value: 'Confraternização social', label: 'Confraternização social' },
+            { value: 'Corporativo', label: 'Corporativo' },
+            { value: 'Feiras e Exposições', label: 'Feiras e Exposições' },
+            { value: 'Masterclass e Palestras', label: 'Masterclass e Palestras' },
+            { value: 'Mentorias e Treinamentos', label: 'Mentorias e Treinamentos' },
+            { value: 'Offsite corporativo', label: 'Offsite corporativo' },
+            { value: 'Reuniões de Networking', label: 'Reuniões de Networking' },
+            { value: 'Workshops, Conferências e Seminários', label: 'Workshops, Conferências e Seminários' },
+            { value: 'Outros', label: 'Outros' }
+          ] },
+          {
+            type: 'row',
+            fields: [
+              { name: 'data', type: 'text', placeholder: 'Data do evento:', required: true, id: 'event-date-picker' },
+              { name: 'convidados', type: 'number', placeholder: 'Nº de convidados', required: true }
+            ]
+          },
+          { name: 'mensagem', type: 'textarea', placeholder: 'Detalhes adicionais:', required: false }
+        ]}
+      />
+    </section>
+
+  </main>
+
+  <!-- Modal Inteligente do WhatsApp -->
+  <WhatsAppModal 
+    eventTypes={[
+      { value: 'Aniversário', label: 'Aniversário' },
+      { value: 'Aniversário debutante', label: 'Aniversário debutante' },
+      { value: 'Bodas', label: 'Bodas' },
+      { value: 'Casamento', label: 'Casamento' },
+      { value: 'Confraternização corporativa', label: 'Confraternização corporativa' },
+      { value: 'Confraternização social', label: 'Confraternização social' },
+      { value: 'Corporativo', label: 'Corporativo' },
+      { value: 'Outros', label: 'Outros' }
+    ]}
+  />
+
+  <Fragment slot="scripts">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Gatilho do botão de WhatsApp para o modal inteligente
+        const triggerBtn = document.getElementById('wa-trigger-btn');
+        const floatingBtn = document.getElementById('wa-floating-btn');
+        
+        if (triggerBtn && floatingBtn) {
+          triggerBtn.addEventListener('click', () => {
+            floatingBtn.click();
+          });
+        }
+
+        // Inicializar flatpickr na data do formulário principal
+        const dateInput = document.getElementById('event-date-picker');
+        if (dateInput && window.flatpickr) {
+          window.flatpickr(dateInput, {
+            disableMobile: true,
+            dateFormat: "d/m/Y",
+            locale: {
+              weekdays: { shorthand: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"], longhand: ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"] },
+              months: { shorthand: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"], longhand: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"] },
+              firstDayOfWeek: 1,
+              rangeSeparator: " até ",
+              ordinal: () => "º"
+            }
+          });
+        }
+      });
+    </script>
+  </Fragment>
+</Base>
