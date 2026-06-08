@@ -75,10 +75,6 @@ const projectSlug = config.project_slug || 'aretha-kitchen';
             </div>
 
             <div class="wa-form-group">
-              <input type="text" name="local_evento" id="wa-local" placeholder="Espaço da Festa" required class="wa-input" />
-            </div>
-
-            <div class="wa-form-group">
               <input type="number" name="convidados" id="wa-convidados" placeholder="Quantidade de convidados" required class="wa-input" min="1" />
             </div>
 
@@ -272,14 +268,13 @@ const projectSlug = config.project_slug || 'aretha-kitchen';
       if (rawData['convidados']) mappedFields['Convidados'] = rawData['convidados'];
       if (rawData['nome']) mappedFields['Nome'] = rawData['nome'];
       if (rawData['empresa']) mappedFields['Empresa'] = rawData['empresa'];
-      if (rawData['local_evento']) mappedFields['Empresa'] = rawData['local_evento'];
       if (rawData['email']) mappedFields['E-mail'] = rawData['email'];
       if (rawData['telefone']) mappedFields['WhatsApp'] = rawData['telefone'];
       if (rawData['mensagem']) mappedFields['Mensagem'] = rawData['mensagem'];
 
       // Capitalize and add any other fields not explicitly mapped
       Object.entries(rawData).forEach(([key, val]) => {
-        const knownKeys = ['tipo', 'data', 'convidados', 'nome', 'empresa', 'local_evento', 'email', 'telefone', 'mensagem'];
+        const knownKeys = ['tipo', 'data', 'convidados', 'nome', 'empresa', 'email', 'telefone', 'mensagem'];
         if (knownKeys.includes(key)) return;
         const capKey = key.charAt(0).toUpperCase() + key.slice(1);
         mappedFields[capKey] = val;
@@ -350,7 +345,7 @@ const projectSlug = config.project_slug || 'aretha-kitchen';
       }
 
       // Redireciona para o WhatsApp oficial
-      const textMsg = `Olá, gostaria de solicitar um orçamento para meu evento! \n\n*Tipo:* ${data.tipo}\n*Data:* ${data.data}\n*Local:* ${data.local_evento}\n*Convidados:* ${data.convidados}\n*Nome:* ${data.nome}\n*E-mail:* ${data.email}`;
+      const textMsg = `Olá, gostaria de solicitar um orçamento para meu evento! \n\n*Tipo:* ${rawData.tipo}\n*Data:* ${rawData.data}\n*Convidados:* ${rawData.convidados}\n*Nome:* ${rawData.nome}\n*E-mail:* ${rawData.email}`;
       const waUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(textMsg)}`;
       
       setTimeout(() => {
@@ -625,12 +620,12 @@ const projectSlug = config.project_slug || 'aretha-kitchen';
   }
 
   .wa-btn-primary {
-    background-color: var(--color-primary);
+    background-color: #B86346;
     color: white;
   }
 
   .wa-btn-primary:hover:not(:disabled) {
-    background-color: var(--color-primary-dark);
+    background-color: #a3593e;
   }
 
   .wa-btn-primary:disabled {

@@ -472,9 +472,9 @@ form select option {
 }
 
 /* Form Submit Button to Match Original Aretha Kitchen */
-form button[type="submit"], 
+form button[type="submit"],
 .wa-btn-primary {
-  background-color: #609B9C !important;
+  background-color: #B86346 !important;
   color: #ffffff !important;
   font-family: 'Gilroy', sans-serif !important;
   font-size: 18px !important;
@@ -487,9 +487,9 @@ form button[type="submit"],
   cursor: pointer !important;
 }
 
-form button[type="submit"]:hover, 
+form button[type="submit"]:hover,
 .wa-btn-primary:hover {
   background-color: #ffffff !important;
-  color: #74979D !important;
+  color: #B86346 !important;
 }
 
