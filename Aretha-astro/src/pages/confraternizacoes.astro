@@ -6,6 +6,9 @@ import Img from '../components/ui/Img.astro';
 import LeadForm from '../components/forms/LeadForm.astro';
 import WhatsAppModal from '../components/layout/WhatsAppModal.astro';
 import '../styles/confraternizacoes.css';
+import bgHero from '../assets/images/Bar-integrado-scaled.webp';
+import bgGastro from '../assets/images/bg-gastronomia-corporativos.png';
+import bgForm from '../assets/images/bg-form-corporativos.webp';
 
 const title = "Restaurante para Confraternizações de Empresas em São Paulo | Aretha Kitchen";
 const description = "Proporcione à sua equipe uma confraternização inesquecível em Moema. Espaço exclusivo com alta gastronomia internacional, bar integrado e drinks sofisticados.";
@@ -34,7 +37,7 @@ const canonical = "https://eventos.arethakitchen.com.br/confraternizacoes/";
   </Fragment>
 
   <!-- Hero Section -->
-  <header class="conf-hero" style="background-image: url('/src/assets/images/Bar-integrado-scaled.webp');" id="hero">
+  <header class="conf-hero" style={`background-image: url('${bgHero.src}');`} id="hero">
     <div class="container conf-hero-content">
       <Img 
         src="ArethaSoulKitchen_Logo.png" 
@@ -139,7 +142,7 @@ const canonical = "https://eventos.arethakitchen.com.br/confraternizacoes/";
 
   <!-- Exclusives Section -->
   <section class="conf-exclusives">
-    <div class="conf-exclusives-bg" style="background-image: url('/src/assets/images/Mao.png');"></div>
+    <div class="conf-exclusives-bg" style="background-image: url('/images/Mao.png');"></div>
     <div class="container">
       <h2 class="conf-exclusives-title">EXCLUSIVIDADES QUE FAZEM<br />TODA A DIFERENÇA A SUA<br />CONFRATERNIZAÇÃO</h2>
       
@@ -190,7 +193,7 @@ const canonical = "https://eventos.arethakitchen.com.br/confraternizacoes/";
   </section>
 
   <!-- Gastronomy Section -->
-  <section class="conf-gastronomy" style="background-image: url('/src/assets/images/bg-gastronomia-corporativos.png');" id="gastronomia">
+  <section class="conf-gastronomy" style={`background-image: url('${bgGastro.src}');`} id="gastronomia">
     <div class="container conf-gastronomy-grid">
       
       <!-- Carousel Swiper (Agora à Esquerda) -->
@@ -261,7 +264,7 @@ const canonical = "https://eventos.arethakitchen.com.br/confraternizacoes/";
   </section>
 
   <!-- Contact Section -->
-  <section class="conf-contact" style="background-image: url('/src/assets/images/bg-form-corporativos.webp');" id="contato">
+  <section class="conf-contact" style={`background-image: url('${bgForm.src}');`} id="contato">
     <div class="container conf-contact-grid">
       
       <div class="conf-contact-info">

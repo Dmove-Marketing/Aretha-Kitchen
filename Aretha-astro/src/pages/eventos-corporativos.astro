@@ -6,6 +6,7 @@ import Img from '../components/ui/Img.astro';
 import LeadForm from '../components/forms/LeadForm.astro';
 import WhatsAppModal from '../components/layout/WhatsAppModal.astro';
 import '../styles/eventos-corporativos.css';
+import bgHero from '../assets/images/bg-hero-corporativos.webp';
 
 const title = "Eventos Corporativos Premium em São Paulo | Aretha Kitchen";
 const description = "Realize seu evento corporativo, reuniões, workshops ou jantares de negócios em um espaço exclusivo com gastronomia internacional de luxo em Moema, SP.";
@@ -36,7 +37,7 @@ const canonical = "https://eventos.arethakitchen.com.br/eventos-corporativos/";
   </Fragment>
 
   <!-- Hero Section -->
-  <header class="corp-hero" style="background-image: url('/src/assets/images/bg-hero-corporativos.webp');" id="hero">
+  <header class="corp-hero" style={`background-image: url('${bgHero.src}');`} id="hero">
     <div class="container corp-hero-content">
       <Img 
         src="ArethaSoulKitchen_Logo.png" 

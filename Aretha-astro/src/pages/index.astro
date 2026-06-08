@@ -6,6 +6,7 @@ import Img from '../components/ui/Img.astro';
 import LeadForm from '../components/forms/LeadForm.astro';
 import WhatsAppModal from '../components/layout/WhatsAppModal.astro';
 import '../styles/index.css';
+import bgBio from '../assets/images/bg-bio.webp';
 
 const title = "Aretha Kitchen | Espaço de Eventos Premium em São Paulo";
 const description = "Espaço Aretha Soul Kitchen. O local ideal para seu evento corporativo, confraternização ou aniversário de luxo em São Paulo. Solicite um orçamento.";
@@ -30,7 +31,7 @@ const canonical = "https://eventos.arethakitchen.com.br/";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   </Fragment>
 
-  <main class="bio-page-wrapper" style="background-image: url('/src/assets/images/bg-bio.webp');">
+  <main class="bio-page-wrapper" style={`background-image: url('${bgBio.src}');`}>
     
     <!-- Logo -->
     <header class="logo-container">

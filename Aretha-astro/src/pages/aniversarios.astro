@@ -6,6 +6,9 @@ import Img from '../components/ui/Img.astro';
 import LeadForm from '../components/forms/LeadForm.astro';
 import WhatsAppModal from '../components/layout/WhatsAppModal.astro';
 import '../styles/aniversarios.css';
+import bgHero from '../assets/images/bg-hero-corporativos.webp';
+import bgGastro from '../assets/images/bg-gastronomia-corporativos.png';
+import bgForm from '../assets/images/bg-form-corporativos.webp';
 
 const title = "Restaurante para Festas de Aniversário em Moema, São Paulo | Aretha Kitchen";
 const description = "Comemore seu aniversário em um espaço descontraído com uma experiência gastronômica internacional de tirar o fôlego. Localizado no coração de Moema, com infraestrutura completa.";
@@ -34,7 +37,7 @@ const canonical = "https://eventos.arethakitchen.com.br/aniversarios/";
   </Fragment>
 
   <!-- Hero Section -->
-  <header class="ani-hero" style="background-image: url('/src/assets/images/bg-hero-corporativos.webp');" id="hero">
+  <header class="ani-hero" style={`background-image: url('${bgHero.src}');`} id="hero">
     <div class="container ani-hero-content">
       <Img 
         src="ArethaSoulKitchen_Logo.png" 
@@ -139,7 +142,7 @@ const canonical = "https://eventos.arethakitchen.com.br/aniversarios/";
 
   <!-- Exclusives Section -->
   <section class="ani-exclusives">
-    <div class="ani-exclusives-bg" style="background-image: url('/src/assets/images/Mao.png');"></div>
+    <div class="ani-exclusives-bg" style="background-image: url('/images/Mao.png');"></div>
     <div class="container">
       <h2 class="ani-exclusives-title">Curta sua festa sem preocupações</h2>
       
@@ -195,7 +198,7 @@ const canonical = "https://eventos.arethakitchen.com.br/aniversarios/";
   </section>
 
   <!-- Gastronomy Section -->
-  <section class="ani-gastronomy" style="background-image: url('/src/assets/images/bg-gastronomia-corporativos.png');" id="gastronomia">
+  <section class="ani-gastronomy" style={`background-image: url('${bgGastro.src}');`} id="gastronomia">
     <div class="container ani-gastronomy-grid">
       
       <!-- Swiper Widget Wrapper with Railroad Background -->
@@ -328,7 +331,7 @@ const canonical = "https://eventos.arethakitchen.com.br/aniversarios/";
   </section>
 
   <!-- Contact Section -->
-  <section class="ani-contact" style="background-image: url('/src/assets/images/bg-form-corporativos.webp');" id="contato">
+  <section class="ani-contact" style={`background-image: url('${bgForm.src}');`} id="contato">
     <div class="container ani-contact-grid">
       
       <div class="ani-contact-info">
